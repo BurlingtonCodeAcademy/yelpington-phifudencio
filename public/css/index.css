@@ -1,9 +1,9 @@
-*{
+*{ /*This is just for taking margin a padding out*/
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-h1{
+h1{ /*Styling for the titles*/
     text-align: center;
     font-size: 80px;
 }
@@ -17,7 +17,7 @@ h1{
 
 
 
-#map{
+#map{ /*This is for the map */
     height: 30vw;
     width: 50vw;
 }
@@ -34,13 +34,13 @@ h1{
     background-color: rgb(175, 175, 175);
 }
 
-.list-items {
+.list-items { /* intem list*/
     font-size: 1.5vw;
     margin: 0;
     padding: 1rem;
     border-bottom: 2.5px solid rgb(65, 65, 65);
 }
-.scroll {
+.scroll { /*Scroll styling */
     overflow: auto;
     width: Calc(20vw + 20px);
     height: 40vw;
@@ -52,9 +52,19 @@ h1{
 .hide-list{
     display: none;
 }
-.show-list{
+.show-list{ /*WEn list appers*/
     background-color: aliceblue;
     font-size: 16px;
     border: 2.5px solid black;
+}
+
+
+.rest-info{/* font from rest page*/
+    font-size: 1em;
+}
+
+#home:hover { /* hover on the title of the rest page.*/
+    cursor: pointer;
+    color: rgb(0, 105, 240);
 }
 

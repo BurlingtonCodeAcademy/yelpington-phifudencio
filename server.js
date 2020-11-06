@@ -7,15 +7,16 @@ const port = process.env.PORT || 8000;
 //serv the public folder
 app.use(express.static("public"));
 
-//This loads the index html
-app.get("/public/:id", (req, res) => {
-  res.sendFile(path.resolve(`public/index.html`));
-});
+//Arrays with the restaurants name
+let restArray = ["american-flatbread", "city-market", "farmhouse-grill", "mr-mikes", "the-friendly-toast", "the-skinny-pancake"]
 
-
-//This was supposed to load the page for each restaurant.... {IS NOT WORKING AND I COUNDT FIGURE OUT WHY the page is not even taking the CSS STYLE.}
+//get for the rest page that gets the id of the restaurant to load the restaurant page.
 app.get('/rest-page/:id', (req,res) => {
+  if(restArray.includes(req.params.id)){
   res.sendFile(path.resolve(`public/rest-page.html`))
+  }else{
+    res.send("Nothing Here!")
+  }
 })
 
 //listen to the port
